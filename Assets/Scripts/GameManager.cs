@@ -22,9 +22,13 @@ public class GameManager : MonoBehaviour {
     private float timer; 
     [SerializeField] int timeGoal; 
     private int counter; 
+
+    [Header("Menu")]
     [SerializeField] GameObject startPanel; 
-    [SerializeField] Animator endAnimator; 
-    [SerializeField] Animator pauseAnimator; 
+    [SerializeField] GameObject endPanel;
+    [SerializeField] GameObject winPanel; 
+    [SerializeField] GameObject losePanel;  
+    [SerializeField] GameObject pausePanel; 
 
     // Start is called before the first frame update
     void Start() {
@@ -32,6 +36,10 @@ public class GameManager : MonoBehaviour {
         counter = timeGoal; 
         hand = new List<Card>(); 
         startPanel.SetActive(true); 
+        winPanel.SetActive(false); 
+        losePanel.SetActive(false);
+        endPanel.SetActive(false); 
+        pausePanel.SetActive(false); 
         SetUp(); 
     }
 
@@ -124,23 +132,25 @@ public class GameManager : MonoBehaviour {
     public void PauseGame() {
         if (state == GameState.pause) {
             state = GameState.move; 
-            // pauseAnimator.SetTrigger("unpause");
+            pausePanel.SetActive(false);
         }
         else {
             state = GameState.pause; 
-            // pauseAnimator.SetTrigger("pause"); 
+            pausePanel.SetActive(true); 
         }
     }
 
     private void WinGame() {
         Debug.Log("You win!"); 
-        // menuAnimator.SetTrigger("win"); 
+        endPanel.SetActive(true); 
+        winPanel.SetActive(true); 
         state = GameState.end; 
     }
 
     private void LoseGame() {
         Debug.Log("You Lose :("); 
-        // menuAnimator.SetTrigger("lose"); 
+        endPanel.SetActive(true); 
+        losePanel.SetActive(true); 
         state = GameState.end; 
     }
 
