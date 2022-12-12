@@ -246,7 +246,7 @@ TextureImporter:
       name: jeweles_heart6
       rect:
         serializedVersion: 2
-        x: 3072
+        x: 3076
         y: 1536
         width: 512
         height: 512
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_7
+      name: jeweles_pear0
       rect:
         serializedVersion: 2
         x: 3584
@@ -432,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_15
+      name: jeweles_princess0
       rect:
         serializedVersion: 2
         x: 3584
@@ -453,7 +453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jeweles_topaz2
+      name: jeweles_brilliant0
       rect:
         serializedVersion: 2
         x: 4
@@ -474,7 +474,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_17
+      name: jeweles_brilliant1
       rect:
         serializedVersion: 2
         x: 512
@@ -495,10 +495,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_18
+      name: jeweles_brilliant2
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1028
         y: 512
         width: 512
         height: 512
@@ -516,7 +516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_19
+      name: jeweles_brilliant3
       rect:
         serializedVersion: 2
         x: 1536
@@ -537,7 +537,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_20
+      name: jeweles_brilliant4
       rect:
         serializedVersion: 2
         x: 2048
@@ -558,7 +558,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_21
+      name: jeweles_brilliant5
       rect:
         serializedVersion: 2
         x: 2560
@@ -579,7 +579,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_22
+      name: jeweles_brilliant6
       rect:
         serializedVersion: 2
         x: 3072
@@ -600,7 +600,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_23
+      name: jeweles_pearl0
       rect:
         serializedVersion: 2
         x: 3584
@@ -621,7 +621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_24
+      name: eyes0
       rect:
         serializedVersion: 2
         x: 0
@@ -642,7 +642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_25
+      name: eyes1
       rect:
         serializedVersion: 2
         x: 512
@@ -663,7 +663,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_26
+      name: eyes2
       rect:
         serializedVersion: 2
         x: 1024
@@ -684,7 +684,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_27
+      name: eyes3
       rect:
         serializedVersion: 2
         x: 1536
@@ -705,7 +705,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_28
+      name: eyes4
       rect:
         serializedVersion: 2
         x: 2048
@@ -726,7 +726,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_29
+      name: eyes5
       rect:
         serializedVersion: 2
         x: 2560
@@ -747,7 +747,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_30
+      name: eyes6
       rect:
         serializedVersion: 2
         x: 3072
@@ -768,7 +768,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jewelesSprites_31
+      name: eyes7
       rect:
         serializedVersion: 2
         x: 3584
@@ -799,38 +799,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jeweles_heart5: 1513834772
       jeweles_cushion1: -715887436
       jeweles_cushion0: 1047035240
       jeweles_heart0: -1437231443
       jeweles_cushion4: 1732200693
-      jewelesSprites_17: -1075028101
-      jewelesSprites_20: 1993920880
-      jewelesSprites_24: -1825201676
+      jeweles_brilliant3: -2038625294
+      eyes5: -1911388031
+      eyes6: -1533527471
+      eyes0: -1825201676
+      eyes7: -818689772
       jeweles_heart4: -308841300
-      jewelesSprites_7: -2125561806
-      jewelesSprites_27: 1374050190
+      jeweles_brilliant2: 1983203083
+      jeweles_brilliant4: 1993920880
+      jeweles_brilliant6: -1312365538
+      jeweles_pear0: -2125561806
       jeweles_heart1: -1762982247
-      jeweles_topaz2: 2024917398
-      jewelesSprites_23: 1439542587
       jeweles_cushion2: 1106232518
+      eyes2: -1913934463
       jeweles_cushion5: 1573911757
-      jewelesSprites_15: -354573783
-      jewelesSprites_21: 270955301
-      jewelesSprites_30: -1533527471
+      eyes4: -1566403030
+      jeweles_pearl0: 1439542587
+      eyes3: 1374050190
+      jeweles_princess0: -354573783
       jeweles_heart2: -1121250328
-      jewelesSprites_29: -1911388031
+      jeweles_brilliant0: 2024917398
       jeweles_heart6: 947536479
       jeweles_cushion6: -1789230762
-      jewelesSprites_31: -818689772
+      eyes1: 1365266908
       jeweles_cushion3: 285753325
-      jewelesSprites_26: -1913934463
-      jewelesSprites_22: -1312365538
-      jewelesSprites_28: -1566403030
-      jewelesSprites_19: -2038625294
-      jewelesSprites_25: 1365266908
+      jeweles_brilliant1: -1075028101
       jeweles_heart3: -1127268863
-      jewelesSprites_18: 1983203083
+      jeweles_brilliant5: 270955301
+      jeweles_heart5: 1513834772
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

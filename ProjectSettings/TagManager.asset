@@ -4,13 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - heart0
-  - heart1
-  - heart2
-  - heart3
-  - heart4
-  - heart5
-  - heart6
+  - Card
   layers:
   - Default
   - TransparentFX

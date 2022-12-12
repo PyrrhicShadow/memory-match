@@ -91,8 +91,8 @@ GameObject:
   - component: {fileID: 1521936060159667653}
   - component: {fileID: 4344868806632084106}
   m_Layer: 0
-  m_Name: Card Heart 3
-  m_TagString: heart3
+  m_Name: Card Heart 6
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,7 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   back: {fileID: 9170083305047737384}
-  _button: {fileID: 4344868806632084106}
+  type: 0
+  value: 6
+  button: {fileID: 4344868806632084106}
   animator: {fileID: 1521936060159667653}
 --- !u!222 &9170083306006284326
 CanvasRenderer:
@@ -161,7 +163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1127268863, guid: 707996bcd67c9da4884a4102ded0a7bf, type: 3}
+  m_Sprite: {fileID: 947536479, guid: 707996bcd67c9da4884a4102ded0a7bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
