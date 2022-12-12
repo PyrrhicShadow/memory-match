@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour {
     private float timer; 
     [SerializeField] int timeGoal; 
     private int counter; 
-
-    [SerializeField] Animator menuAnimator; 
+    [SerializeField] GameObject startPanel; 
+    [SerializeField] Animator endAnimator; 
     [SerializeField] Animator pauseAnimator; 
 
     // Start is called before the first frame update
@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour {
         matches = 0; 
         counter = timeGoal; 
         hand = new List<Card>(); 
+        startPanel.SetActive(true); 
         SetUp(); 
     }
 
@@ -115,7 +116,7 @@ public class GameManager : MonoBehaviour {
 
     [ContextMenu("Play")]
     public void PlayGame() {
-        // menuAnimator.SetTrigger("play"); 
+        startPanel.SetActive(false); 
         state = GameState.move; 
     }
 
