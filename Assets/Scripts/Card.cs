@@ -2,42 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem; 
+using UnityEngine.UI; 
 
 public class Card : MonoBehaviour {
 
-    [SerializeField] GameObject front; 
     [SerializeField] GameObject back; 
-    [SerializeField] PlayerInput input; 
+    [SerializeField] Button _button; 
+    public Button button { get { return _button;} private set { _button = value; } }
+    [SerializeField] Animator animator; 
     private InputAction flipAction; 
 
     // Awake is called before all Start
     void Awake() {
-        flipAction = input.actions["Fire"]; 
+
     }
 
 
     // Start is called before the first frame update
     void Start() {
-        Reset(); 
+        button.enabled = true; 
     }
 
     public void Flip() {
-        back.SetActive(false); 
-        front.SetActive(true); 
+        animator.SetTrigger("flip"); 
     }
 
     public void Reset() {
-        back.SetActive(true); 
-        front.SetActive(false); 
+        // play reset animation
+        animator.SetTrigger("unflip"); 
     }
 
-    
-    private void OnEnable() {
-        flipAction.performed += _ => Flip(); 
-
+    public void Matched() {
+        button.enabled = false; 
+        // play matched effect
     }
 
-    private void OnDisable() {
-        flipAction.performed -= _ => Flip(); 
+    public void SetButton(GameManager manager) {
+       button.onClick.AddListener(delegate { manager.AddCard(this); }); 
     }
+
 }

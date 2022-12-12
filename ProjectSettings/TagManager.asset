@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - heart0
+  - heart1
+  - heart2
+  - heart3
+  - heart4
+  - heart5
+  - heart6
   layers:
   - Default
   - TransparentFX
