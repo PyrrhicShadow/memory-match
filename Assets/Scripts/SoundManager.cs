@@ -40,8 +40,9 @@ public class SoundManager : MonoBehaviour {
     }
 
     void Awake() {
-        if (soundManager != null) {
-            Destroy(gameObject);  
+        if (SoundManager.soundManager != null) {
+            Destroy(gameObject); 
+            return;  
         }
         soundManager = this; 
         DontDestroyOnLoad(gameObject); 

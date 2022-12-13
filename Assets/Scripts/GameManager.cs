@@ -186,9 +186,6 @@ public class GameManager : MonoBehaviour {
         Debug.Log("You win!"); 
         HighScore(); 
         state = GameState.end; 
-        if (sound != null) {
-            sound.Win(); 
-        }
         winPanel.SetActive(true); 
         StartCoroutine(SummonPanel(endPanel)); 
     }
@@ -234,6 +231,9 @@ public class GameManager : MonoBehaviour {
 
     private IEnumerator SummonPanel(GameObject panel) {
         yield return new WaitForSeconds(menuDelay); 
+        if (sound != null) {
+            sound.Win(); 
+        }
         panel.SetActive(true); 
     }
 
