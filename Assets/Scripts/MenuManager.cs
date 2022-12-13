@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour {
     [SerializeField] string sceneToLoad; 
     [SerializeField] World world; 
+    private SoundManager sound; 
 
     [Header("Start Page Objects")]
     [SerializeField] Text difficultyText; 
@@ -17,10 +18,12 @@ public class MenuManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        sound = GameObject.FindWithTag("SoundController").GetComponent<SoundManager>(); 
+
         currentMode = PlayerPrefs.GetInt("game mode", 0); 
         currentDeck = PlayerPrefs.GetInt("deck", 0); 
-        SetMode(); 
-        SetDeck();  
+        SetMode(1); 
+        SetDeck(1);  
     }
 
     // Update is called once per frame
@@ -30,6 +33,9 @@ public class MenuManager : MonoBehaviour {
 
     [ContextMenu("Play")]
     public void Play() {
+        if (sound != null) {
+            sound.Select(); 
+        }
         SceneManager.LoadScene(sceneToLoad);
     }
 
@@ -44,8 +50,8 @@ public class MenuManager : MonoBehaviour {
             currentMode--; 
         }
 
-        SetMode(); 
-        SetDeck(); 
+        SetMode(-1); 
+        SetDeck(-1); 
     }
 
     public void NextMode() {
@@ -56,8 +62,8 @@ public class MenuManager : MonoBehaviour {
             currentMode++; 
         }
 
-        SetMode(); 
-        SetDeck(); 
+        SetMode(1); 
+        SetDeck(1); 
     }
 
     /**     Deck Scroll Bar     **/
@@ -71,7 +77,7 @@ public class MenuManager : MonoBehaviour {
             currentDeck--; 
         }
 
-        SetDeck(); 
+        SetDeck(-1); 
     }
 
     public void NextDeck() {
@@ -82,21 +88,34 @@ public class MenuManager : MonoBehaviour {
             currentDeck++; 
         }
 
-        SetDeck(); 
+        SetDeck(1); 
     }
 
-    private void SetMode() {
+    private void SetMode(int dir) {
+        // play button sound 
+        if (sound != null) {
+            sound.Click(); 
+        }
         // change text 
         difficultyText.text = world.gameModes[currentMode].displayName; 
         // save difficulty 
         PlayerPrefs.SetInt("game mode", (int)currentMode); 
     }
 
-    private void SetDeck() {
+    private void SetDeck(int dir) {
         if (world.gameModes[currentMode].boardSize > world.decks[currentDeck].cards.Length - 1) {
-            NextDeck(); 
+            if (dir > 0) {
+                NextDeck(); 
+            }
+            else {
+                PrevDeck(); 
+            }
         }
         else {
+            // play button sound 
+            if (sound != null) {
+                sound.Click(); 
+            }
             // change text 
             deckText.text = world.decks[currentDeck].displayName; 
             // change image 

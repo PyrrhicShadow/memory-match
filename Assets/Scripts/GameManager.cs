@@ -11,7 +11,7 @@ public enum GameState {
 
 public class GameManager : MonoBehaviour {
 
-    [SerializeField] SoundManager sound; 
+    private SoundManager sound; 
     [SerializeField] World world; 
 
     [Header("Board")]
@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour {
         matches = 0; 
         counter = timeGoal; 
         hand = new List<Card>(); 
+        sound = GameObject.FindWithTag("SoundController").GetComponent<SoundManager>(); 
 
         startPanel.SetActive(true); 
         winPanel.SetActive(false); 
@@ -162,6 +163,9 @@ public class GameManager : MonoBehaviour {
 
     [ContextMenu("Play")]
     public void PlayGame() {
+        if (sound != null) {
+            sound.Select(); 
+        }
         startPanel.SetActive(false); 
         state = GameState.move; 
     }
@@ -182,7 +186,9 @@ public class GameManager : MonoBehaviour {
         Debug.Log("You win!"); 
         HighScore(); 
         state = GameState.end; 
-        sound.Win(); 
+        if (sound != null) {
+            sound.Win(); 
+        }
         winPanel.SetActive(true); 
         StartCoroutine(SummonPanel(endPanel)); 
     }
@@ -190,7 +196,9 @@ public class GameManager : MonoBehaviour {
     private void LoseGame() {
         Debug.Log("You Lose :("); 
         state = GameState.end; 
-        sound.Lose(); 
+        if (sound != null) {
+            sound.Lose(); 
+        }
         losePanel.SetActive(true); 
         StartCoroutine(SummonPanel(endPanel)); 
     }
@@ -208,12 +216,19 @@ public class GameManager : MonoBehaviour {
 
     [ContextMenu("Play Again")]
     public void PlayAgain() {
+        if (sound != null) {
+            sound.Select(); 
+        }
         // reload this level
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
 
     [ContextMenu("Main Menu")]
     public void MainMenu() {
+        if (sound != null) {
+            sound.Select(); 
+        }
+        // got to main menu
         SceneManager.LoadScene(menuSceneName); 
     }
 
@@ -229,6 +244,7 @@ public class GameManager : MonoBehaviour {
         if (currentScore < prevScore) {
             PlayerPrefs.SetInt("Memory " + world.gameModes[PlayerPrefs.GetInt("game mode", 0)].displayName, currentScore); 
             newHighScore.SetActive(true); 
+            highScore.text = currentScore.ToString(); 
         }
 
         finalScore.text = currentScore.ToString(); 

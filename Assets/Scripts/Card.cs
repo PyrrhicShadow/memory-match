@@ -43,9 +43,6 @@ public class Card : MonoBehaviour {
         button.enabled = true; 
         // play reset animation
         animator.SetTrigger("unflip"); 
-        if (sound != null) {
-            sound.Flip(); 
-        }
     }
 
     public void Matched() {

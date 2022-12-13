@@ -3,20 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
+
+    public static SoundManager soundManager; 
     [SerializeField] AudioSource background; 
+    
+    [Header("Game Sounds")]
     [SerializeField] AudioSource flip; 
     [SerializeField] AudioSource matched; 
     [SerializeField] AudioSource win; 
     [SerializeField] AudioSource lose; 
+    
+    [Header("UI Sounds")]
+    [SerializeField] AudioSource click; 
+    [SerializeField] AudioSource select; 
+
     public bool muteEffects { 
         get {
-            return (flip.mute && matched.mute && win.mute && lose.mute); 
+            return (flip.mute && matched.mute && win.mute && lose.mute && click.mute && select.mute); 
         } 
         set {
             flip.mute = value; 
             matched.mute = value; 
             win.mute = value; 
             lose.mute = value; 
+            click.mute = value; 
+            select.mute = value; 
         } 
     }
     public bool muteMusic {
@@ -26,6 +37,14 @@ public class SoundManager : MonoBehaviour {
         set {
             background.mute = value; 
         }
+    }
+
+    void Awake() {
+        if (soundManager != null) {
+            Destroy(gameObject);  
+        }
+        soundManager = this; 
+        DontDestroyOnLoad(gameObject); 
     }
 
     // Start is called before the first frame update
@@ -55,5 +74,13 @@ public class SoundManager : MonoBehaviour {
 
     public void Lose() {
         lose.Play(); 
+    }
+
+    public void Click() {
+        click.Play(); 
+    }
+    
+    public void Select() {
+        select.Play(); 
     }
 }

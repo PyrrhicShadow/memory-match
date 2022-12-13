@@ -16,3 +16,12 @@
 * unnamed light blue iris: https://www.pexels.com/photo/close-up-photo-of-right-person-eye-1435823/ by Наталья Кленова
 * Iris of Scotty: photo taken by Scotty with express permission to appear in this game.
 * Iris of The One Behind You: photo taken by The One Behind You with express permission to appear in this game.
+
+## Sounds 
+
+* flipCard: https://pixabay.com/sound-effects/flipcard-91468/ by Splashdust
+* Good!: https://pixabay.com/sound-effects/good-6081/ by syseQ
+* collect: https://pixabay.com/sound-effects/collect-5930/ by Wagna
+* Sad Trumpet: https://pixabay.com/sound-effects/sad-trumpet-46384/ by rcniclas
+* Button: https://pixabay.com/sound-effects/button-124476/ by StudioAlivioGlobal 
+* Interface: https://pixabay.com/sound-effects/interface-124464/ by StudioAlivioGlobal
