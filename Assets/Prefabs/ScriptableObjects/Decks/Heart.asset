@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0358ce81d6890c74e8e476a2336ad41e, type: 3}
+  m_Name: Heart
+  m_EditorClassIdentifier: 
+  displayName: Hearts
+  cards:
+  - {fileID: 9170083306006284322, guid: f80cc360af75fcd45bb27445b21a43fc, type: 3}
+  - {fileID: 9170083306006284322, guid: aaebf914b36f0ea498637db984ace8bb, type: 3}
+  - {fileID: 9170083306006284322, guid: aa0da909714176741802ff51051dfa7e, type: 3}
+  - {fileID: 9170083306006284322, guid: 6cfa27eff60b7cb48876ff6657abfa4a, type: 3}
+  - {fileID: 9170083306006284322, guid: 65c8fe0ee8ce7884bbf0147ed23baf94, type: 3}
+  - {fileID: 9170083306006284322, guid: 6ddf468f2578b1f49a0e0a0dd01b501a, type: 3}
+  - {fileID: 9170083306006284322, guid: 303d71ef8689b1f49aea26c40d6cc4ec, type: 3}
+  colorblind: 0

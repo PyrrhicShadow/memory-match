@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0358ce81d6890c74e8e476a2336ad41e, type: 3}
+  m_Name: Eyes
+  m_EditorClassIdentifier: 
+  displayName: Eyes
+  cards:
+  - {fileID: 9170083306006284322, guid: fef2532715ff9204e922659ea8a8988a, type: 3}
+  - {fileID: 9170083306006284322, guid: 9afba7eae8187024796c9378cbf9cee8, type: 3}
+  - {fileID: 9170083306006284322, guid: 9f18f0f173edbfd48954ce5f2b778134, type: 3}
+  - {fileID: 9170083306006284322, guid: adaa23904bcd250459aa8f8025a464dc, type: 3}
+  - {fileID: 9170083306006284322, guid: c62f80d334fe74147b7b17677f5d9f38, type: 3}
+  - {fileID: 9170083306006284322, guid: 7c273922a863cf946b307f775d4d191c, type: 3}
+  - {fileID: 9170083306006284322, guid: ac9a834d8c501f44aaccdec12c868774, type: 3}
+  - {fileID: 9170083306006284322, guid: b902cd26eb9df5640bc5b1799c9c1a55, type: 3}
+  colorblind: 0

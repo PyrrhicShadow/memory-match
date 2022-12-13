@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637b2683e08a49748ac1fc0af08aace7, type: 3}
+  m_Name: World
+  m_EditorClassIdentifier: 
+  gameModes:
+  - {fileID: 11400000, guid: fe3a0520aaeb7bb4cb18c61db9a8929a, type: 2}
+  - {fileID: 11400000, guid: e8083f3c1ab85ab4293c341d1c1308bb, type: 2}
+  - {fileID: 11400000, guid: 1d9e9c05df34aeb4ca29076201eedcb3, type: 2}
+  decks:
+  - {fileID: 11400000, guid: 2ccaf6d0abcb9684f9417cf23753bcaa, type: 2}
+  - {fileID: 11400000, guid: 390f8f7be4ed72d4d828619b3f7a47e1, type: 2}
+  - {fileID: 11400000, guid: 03466106515dac448b732df618435acc, type: 2}
+  - {fileID: 11400000, guid: 37508e7627f9ca04b88bd887057fd6b5, type: 2}
+  - {fileID: 11400000, guid: 8e40036b8ea4ce1419482a52a47b92e0, type: 2}
+  - {fileID: 11400000, guid: 8e40036b8ea4ce1419482a52a47b92e0, type: 2}

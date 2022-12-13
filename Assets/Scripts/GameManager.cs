@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI; 
 using UnityEngine.SceneManagement; 
 
+[System.Serializable]
 public enum GameState {
     move, pause, end 
 }
@@ -11,6 +12,7 @@ public enum GameState {
 public class GameManager : MonoBehaviour {
 
     [SerializeField] SoundManager sound; 
+    [SerializeField] World world; 
 
     [Header("Board")]
     [SerializeField] GameObject[] cardPrefabs;
@@ -36,16 +38,28 @@ public class GameManager : MonoBehaviour {
     [SerializeField] GameObject losePanel;  
     [SerializeField] GameObject pausePanel; 
 
+    void Awake() {
+        if (world != null) {
+            GameMode mode = world.gameModes[PlayerPrefs.GetInt("game mode", 0)]; 
+            timeGoal = mode.time; 
+            boardSize = mode.boardSize; 
+            cardPrefabs = world.decks[PlayerPrefs.GetInt("deck", 0)].cards; 
+        }
+    }
+
     // Start is called before the first frame update
     void Start() {
         matches = 0; 
         counter = timeGoal; 
         hand = new List<Card>(); 
+
         startPanel.SetActive(true); 
         winPanel.SetActive(false); 
         losePanel.SetActive(false);
         endPanel.SetActive(false); 
         pausePanel.SetActive(false); 
+
+        time.text = counter.ToString(); 
         SetUp(); 
     }
 

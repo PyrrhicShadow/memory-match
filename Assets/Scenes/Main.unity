@@ -867,6 +867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 1136738671}
+  world: {fileID: 11400000, guid: d2b42c254b6a5a04c8a362047188d2c6, type: 2}
   cardPrefabs:
   - {fileID: 9170083306006284322, guid: 303d71ef8689b1f49aea26c40d6cc4ec, type: 3}
   - {fileID: 9170083306006284322, guid: f80cc360af75fcd45bb27445b21a43fc, type: 3}
@@ -2315,8 +2316,8 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 70, y: 70}
   m_Spacing: {x: 20, y: 20}
-  m_Constraint: 1
-  m_ConstraintCount: 5
+  m_Constraint: 2
+  m_ConstraintCount: 4
 --- !u!114 &1921598229
 MonoBehaviour:
   m_ObjectHideFlags: 0
