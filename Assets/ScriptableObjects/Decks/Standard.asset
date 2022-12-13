@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0358ce81d6890c74e8e476a2336ad41e, type: 3}
   m_Name: Standard
   m_EditorClassIdentifier: 
-  displayName: 
+  displayName: Standard
+  displayImage: {fileID: 0}
   cards:
   - {fileID: 9170083306006284322, guid: d0829b5e65360e84d944c5a523f6c807, type: 3}
   - {fileID: 9170083306006284322, guid: 39e26a5fa9509eb479dc4c03ab248762, type: 3}
@@ -28,14 +29,6 @@ MonoBehaviour:
   - {fileID: 9170083306006284322, guid: 787f760aa07977743b504a1cba493c9a, type: 3}
   - {fileID: 9170083306006284322, guid: 76b25c3cfc5ef1941a197a931eec4a26, type: 3}
   - {fileID: 9170083306006284322, guid: 13f2e847ce0a09a4598c8eb5ae75e423, type: 3}
-  - {fileID: 9170083306006284322, guid: fef2532715ff9204e922659ea8a8988a, type: 3}
-  - {fileID: 9170083306006284322, guid: 9afba7eae8187024796c9378cbf9cee8, type: 3}
-  - {fileID: 9170083306006284322, guid: 9f18f0f173edbfd48954ce5f2b778134, type: 3}
-  - {fileID: 9170083306006284322, guid: adaa23904bcd250459aa8f8025a464dc, type: 3}
-  - {fileID: 9170083306006284322, guid: c62f80d334fe74147b7b17677f5d9f38, type: 3}
-  - {fileID: 9170083306006284322, guid: 7c273922a863cf946b307f775d4d191c, type: 3}
-  - {fileID: 9170083306006284322, guid: ac9a834d8c501f44aaccdec12c868774, type: 3}
-  - {fileID: 9170083306006284322, guid: b902cd26eb9df5640bc5b1799c9c1a55, type: 3}
   - {fileID: 9170083306006284322, guid: 303d71ef8689b1f49aea26c40d6cc4ec, type: 3}
   - {fileID: 9170083306006284322, guid: f80cc360af75fcd45bb27445b21a43fc, type: 3}
   - {fileID: 9170083306006284322, guid: aaebf914b36f0ea498637db984ace8bb, type: 3}

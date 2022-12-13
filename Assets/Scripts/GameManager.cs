@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
     public GameState state { get { return _state; } private set { _state = value; } }
     [SerializeField] Image clock; 
     [SerializeField] Text time; 
+    [SerializeField] Text highScore; 
     private int matches; 
     private float timer; 
     [SerializeField] int timeGoal; 
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] GameObject winPanel; 
     [SerializeField] GameObject losePanel;  
     [SerializeField] GameObject pausePanel; 
+    [SerializeField] Text finalScore; 
+    [SerializeField] GameObject newHighScore; 
 
     void Awake() {
         if (world != null) {
@@ -58,8 +61,10 @@ public class GameManager : MonoBehaviour {
         losePanel.SetActive(false);
         endPanel.SetActive(false); 
         pausePanel.SetActive(false); 
+        newHighScore.SetActive(false); 
 
         time.text = counter.ToString(); 
+        highScore.text = PlayerPrefs.GetInt("Memory " + world.gameModes[PlayerPrefs.GetInt("game mode", 0)].displayName, 0).ToString(); 
         SetUp(); 
     }
 
@@ -175,6 +180,7 @@ public class GameManager : MonoBehaviour {
 
     private void WinGame() {
         Debug.Log("You win!"); 
+        HighScore(); 
         state = GameState.end; 
         sound.Win(); 
         winPanel.SetActive(true); 
@@ -214,5 +220,18 @@ public class GameManager : MonoBehaviour {
     private IEnumerator SummonPanel(GameObject panel) {
         yield return new WaitForSeconds(menuDelay); 
         panel.SetActive(true); 
+    }
+
+    private void HighScore() {
+        int prevScore = PlayerPrefs.GetInt("Memory " + world.gameModes[PlayerPrefs.GetInt("game mode", 0)].displayName, 100000);
+        int currentScore = timeGoal - counter; 
+
+        if (currentScore < prevScore) {
+            PlayerPrefs.SetInt("Memory " + world.gameModes[PlayerPrefs.GetInt("game mode", 0)].displayName, currentScore); 
+            newHighScore.SetActive(true); 
+        }
+
+        finalScore.text = currentScore.ToString(); 
+
     }
 }

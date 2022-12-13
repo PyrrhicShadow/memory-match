@@ -6,8 +6,9 @@ using UnityEngine;
 public class Deck : ScriptableObject {
 
     public string displayName; 
+    public Sprite displayImage; 
     public GameObject[] cards;
-    
+
     [Header("Accessibility Tags")]
     public bool colorblind; 
 }

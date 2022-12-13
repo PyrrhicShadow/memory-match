@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0358ce81d6890c74e8e476a2336ad41e, type: 3}
   m_Name: Colorblind
   m_EditorClassIdentifier: 
-  displayName: 
+  displayName: Colorblind Friendly
+  displayImage: {fileID: 0}
   cards:
   - {fileID: 9170083306006284322, guid: 39e26a5fa9509eb479dc4c03ab248762, type: 3}
   - {fileID: 9170083306006284322, guid: beaf769af07f401429957ec68dac82cf, type: 3}
